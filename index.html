@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SOAL//LAB 2.0 — Generator Soal SD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scan"></div>
+<header><a class="logo" href="#"><b>●</b> SOAL<span>//</span>LAB <small>2.0</small></a><div class="header-right"><span>● ENGINE ONLINE</span><button id="theme">◐</button></div></header>
+<main>
+<section class="hero"><div><p class="eyebrow">SMART QUESTION GENERATOR · KURIKULUM MERDEKA</p><h1>Soal SD.<br><i>Lebih banyak.</i><br>Lebih variatif.</h1><p class="lead">Generator latihan kelas 1–6 dengan bank template bertingkat, parameter acak, anti-duplikasi, pembahasan, dan dokumen siap cetak.</p></div>
+<div class="stats"><div><b>6</b><span>MAPEL</span></div><div><b>6</b><span>KELAS</span></div><div><b id="templates">1000+</b><span>KOMBINASI</span></div></div></section>
+
+<section class="app">
+<aside class="config"><div class="section-title"><span>01</span> SETUP PAKET</div>
+<div class="grid2"><label>Kelas<select id="grade"></select></label><label>Jumlah<select id="amount"></select></label></div>
+<label>Mata pelajaran<select id="subject"></select></label><label>Materi<select id="topic"></select></label>
+<label>Kesulitan<select id="level"><option value="easy">Mudah</option><option value="medium" selected>Sedang</option><option value="hard">Sulit</option><option value="mixed">Campuran</option></select></label>
+<label>Jenis soal<select id="type"><option value="mixed">Campuran PG + Isian</option><option value="mc">Pilihan ganda</option><option value="short">Isian singkat</option></select></label>
+<div class="tog"><input id="shuffle" type="checkbox" checked><span>Acak urutan soal & opsi</span></div>
+<div class="filebox">
+  <div class="file-title">📄 GENERATE DARI FILE</div>
+  <p>Upload materi <b>TXT, CSV, JSON, PDF, atau DOCX</b>. File diproses langsung di browser untuk membuat soal otomatis.</p>
+  <input id="sourceFile" type="file" accept=".txt,.csv,.json,.pdf,.docx,text/plain,text/csv,application/json,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+  <div id="fileStatus" class="file-status">Belum ada file.</div>
+</div>
+<button id="generate" class="generate">GENERATE <b>↗</b></button>
+<button id="generateFile" class="file-generate" disabled>GENERATE DARI FILE <b>↗</b></button><button id="random" class="secondary">⚡ Acak konfigurasi</button>
+<p class="tip">Semua proses berjalan di browser. Tidak memakai API berbayar.</p>
+</aside>
+<section class="output"><div class="output-head"><div class="section-title"><span>02</span> WORKSPACE HASIL</div><div id="state">READY</div></div>
+<div id="empty" class="empty"><div class="ring">✦</div><h2>Workspace kosong</h2><p>Atur konfigurasi lalu generate paket soal.</p></div>
+<div id="result" class="hidden"></div></section>
+</section>
+</main>
+<footer>SOAL//LAB 2.0 · STATIC WEB APP · GITHUB PAGES</footer>
+<script src="app.js"></script>
+</body></html>
